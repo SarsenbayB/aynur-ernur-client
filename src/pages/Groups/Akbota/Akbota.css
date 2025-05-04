@@ -1,0 +1,88 @@
+/* Akbota.css */
+.slider-container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.number-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10%;
+}
+
+.nav-button.prev {
+  left: 10px;
+}
+
+.nav-button.next {
+  right: 10px;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.caption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 45px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.thumbnail.active {
+  border-color: #007bff;
+}
+
+.thumbnail:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --breakpoint-2xsm: 375px;
+  --breakpoint-xsm: 425px;
+  --breakpoint-3xl: 2000px;
+
+  --color-current: currentColor;
+  --color-transparent: transparent;
+  --color-white: #ffffff;
+  --color-primary: #0987ec;
+  --color-secondary: #e6f3fd;
+  --color-secondary-dark: #2b3a46;
+  --color-stroke: #e8e8e8;
+  --color-night: #111928;
+  --color-stroke-dark: #27303e;
+
+  --color-dark: #111928;
+  --color-dark-2: #1f2a37;
+  --color-dark-3: #374151;
+  --color-dark-4: #4b5563;
+  --color-dark-5: #6b7280;
+  --color-dark-6: #9ca3af;
+  --color-dark-7: #d1d5db;
+  --color-dark-8: #e5e7eb;
+  --color-dark-9: #141414;
+
+  --color-gray: #eff4fb;
+  --color-gray-dark: #122031;
+  --color-gray-1: #f6f8fb;
+  --color-gray-2: #f3f4f6;
+  --color-gray-3: #e5e7eb;
+  --color-gray-4: #d1d5db;
+  --color-gray-5: #9ca3af;
+  --color-gray-6: #6b7280;
+  --color-gray-7: #374151;
+  --color-gray-8: #696969:
+
+  --color-green: #22ad5c;
+  --color-green-dark: #1a8245;
+  --color-green-light: #2cd673;
+  --color-green-light-1: #10b981;
+  --color-green-light-2: #57de8f;
+  --color-green-light-3: #82e6ac;
+  --color-green-light-4: #acefc8;
+  --color-green-light-5: #c2f3d6;
+  --color-green-light-6: #daf8e6;
+  --color-green-light-7: #e9fbf0;
+
+  --color-red: #f23030;
+  --color-red-dark: #e10e0e;
+  --color-red-light: #f56060;
+  --color-red-light-2: #f89090;
+  --color-red-light-3: #fbc0c0;
+  --color-red-light-4: #fdd8d8;
+  --color-red-light-5: #feebeb;
+  --color-red-light-6: #fef3f3;
+
+  --color-blue: #3c50e0;
+  --color-blue-dark: #1c3fb7;
+  --color-blue-light: #5475e5;
+  --color-blue-light-2: #8099ec;
+  --color-blue-light-3: #adbcf2;
+  --color-blue-light-4: #c3cef6;
+  --color-blue-light-5: #e1e8ff;
+
+  --color-orange-light: #f59460;
+
+  --color-yellow-dark: #f59e0b;
+  --color-yellow-dark-2: #d97706;
+  --color-yellow-light: #fcd34d;
+  --color-yellow-light-4: #fffbeb;
+
+  --color-white-1: #fafafa;
+}
+
+@font-face {
+  font-family: "Epilogue";
+  src: local("Epilogue"), url("./fonts/Epilogue-Regular.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Epilogue", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 98%);
+}

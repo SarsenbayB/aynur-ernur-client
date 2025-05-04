@@ -1,0 +1,60 @@
+.team-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.team-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.team-form input,
+.team-form button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.team-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.team-item img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.team-info {
+  margin-top: 10px;
+}
+
+.team-info h2 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.team-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.team-info button {
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}

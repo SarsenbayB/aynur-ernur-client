@@ -1,0 +1,79 @@
+.group .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  padding: 0.5rem;
+  margin: 8px 60px;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.group .container {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px auto;
+  padding: 0;
+  gap: 30px;
+}
+
+.group .container .items {
+  margin: 10px;
+  width: 350px;
+  height: 330px;
+  background-color: white;
+  border: 2.5px solid #3e424b;
+  border-radius: 12px;
+}
+
+.group .container .items .name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(0, 17, 255);
+  height: 25px;
+  padding-top: 4px;
+  color: white;
+  margin: 0;
+  font-size: large;
+}
+
+.group .container .items .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  color: red;
+  font-size: medium;
+}
+
+.group .container .items .img img {
+  width: 350px;
+  height: 250px;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  transition-duration: 0.8s;
+}
+
+.group .container .items .img {
+  overflow: hidden;
+  margin: 0;
+}
+
+.group .container .items:hover .img img {
+  transform: scale(1.2);
+  transition-duration: 0.8s;
+  border-radius: 12px;
+}
+
+.items {
+  overflow: hidden;
+}

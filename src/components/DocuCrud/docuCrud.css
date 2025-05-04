@@ -1,0 +1,41 @@
+/* components/DocuCrud/docuCrud.css */
+.docu-crud {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .docu-crud td {
+    padding: 10px;
+  }
+  
+  .docu-comp {
+    display: flex;
+    align-items: center;
+  }
+  
+  .save-button,
+  .cancel-button,
+  .action-button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .save-button {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .cancel-button {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .action-button {
+    background-color: #f3a807;
+    color: #fff;
+  }
+  
+  .action-button:hover {
+    background-color: #f3a803;
+  }
+  

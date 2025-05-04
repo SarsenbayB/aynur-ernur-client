@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'icomon';
+    src:url('..//fonts/icomon.ttf') format('truetype'),
+      url('..//fonts/icomon.woff?kreeh0') format('woff'),
+      url('..//fonts/icomon.svg?kreeh0#icomon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"]::before,
+  [class*=" icon-"]::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomon' !important;
+    /* speak: never; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-facebook-f:before {
+    content: "\e900";
+  }
+  .icon-instagram:before {
+    content: "\e901";
+  }
+  .icon-whatsapp:before {
+    content: "\e902";
+  }

@@ -1,0 +1,151 @@
+.forgot-password,
+.reset-password,
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Card container styles */
+.forgot-password > *,
+.reset-password > *,
+.confirmation {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Heading styles */
+h5 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Form styles */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input container */
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Input fields */
+.emailInput {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.emailInput:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  outline: none;
+}
+
+.emailInput.error {
+  border-color: #ff4d4f;
+}
+
+/* Error and success messages */
+.errorText,
+.successText {
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.errorText {
+  color: #ff4d4f;
+  background-color: #fff2f0;
+  border: 1px solid #ffccc7;
+}
+
+.successText {
+  color: #52c41a;
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+}
+
+/* Button styles */
+.forgbtn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.forgbtn:hover {
+  background-color: #357abd;
+}
+
+.forgbtn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Link styles */
+.linkPage {
+  color: #4a90e2;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: center;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.linkPage:hover {
+  color: #357abd;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .forgot-password > *,
+  .reset-password > *,
+  .confirmation > * {
+    padding: 20px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .forgbtn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

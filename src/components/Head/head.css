@@ -1,0 +1,166 @@
+.header {
+  font-size: 1rem;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 01rem;
+}
+
+.navbar > .container {
+  font-weight: 500;
+  position: relative;
+  color: white;
+  margin: 2px 14px;
+  font-size: 18px;
+  transition-duration: 1s;
+}
+
+.navbar-brand a {
+  color: white;
+  transition-duration: 1s;
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-brand a:hover {
+  color: rgb(243, 168, 7);
+  transition-duration: 1s;
+}
+
+.navbar-nav .nav-link a {
+  font-weight: 400;
+  position: relative;
+  color: white;
+  margin: 2px 14px;
+  font-size: 18px;
+  transition-duration: 1s;
+}
+
+.navbar-nav .nav-link a:hover {
+  color: rgb(243, 168, 7);
+  transition-duration: 0.3s;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #f3a807;
+}
+
+.navbar-nav .nav-link.show {
+  color: red;
+}
+
+.navbar-nav .nav-link a::before {
+  content: "";
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition-duration: 1s;
+}
+
+.navbar-nav .nav-link a:hover::before {
+  width: 100%;
+  transition-duration: 1s;
+  background-color: rgb(243, 168, 7);
+}
+
+.navbar-nav .nav-link a.active {
+  color: red;
+}
+
+.navbar-toggler {
+  background-color: white;
+}
+
+.navbar-toggler-icon {
+  width: 1em;
+  height: 1em;
+  color: white;
+}
+
+.navbar-toggler a {
+  background-color: white;
+}
+
+.sign__btn {
+  margin: 5px;
+  background-color: #f3a807;
+  color: white;
+  border-radius: 10px;
+}
+
+.log__btn {
+  margin: 5px;
+  background-color: #f3a807;
+  color: white;
+  border-radius: 10px;
+}
+
+.dropdown-item {
+  padding: 10px;
+}
+
+.dropdown-item a {
+  display: flex;
+  color: black;
+  width: 100%;
+}
+
+a.dropdown-item:hover {
+  background-color: #f3a807;
+}
+
+.exit__btn {
+  margin: 5px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+}
+
+.me-auto {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+@media (max-width: 1230px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .dropdown {
+    margin-left: 15px;
+  }
+
+  .sign__btn {
+    margin: 5px;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .log__btn {
+    margin: 5px;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .exit__btn {
+    margin: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+  }
+}
