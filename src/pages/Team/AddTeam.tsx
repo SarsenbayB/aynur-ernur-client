@@ -47,9 +47,9 @@ const AddTeam: React.FC = () => {
       setLoading(true);
       const fields: TeamData = { name, imageUrl, role };
       if (isEditing) {
-        await axios.patch(`/team/${id}`, fields);
+        await axios.patch(`/api/team/${id}`, fields);
       } else {
-        await axios.post("/team/add", fields);
+        await axios.post("/api/team/add", fields);
       }
       navigate(`/OurTeam`);
     } catch (err) {
@@ -63,7 +63,7 @@ const AddTeam: React.FC = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`/team/${id}`)
+        .get(`/api/team/${id}`)
         .then(({ data }) => {
           setName(data.name);
           setImageUrl(data.imageUrl);

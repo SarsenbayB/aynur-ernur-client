@@ -29,10 +29,16 @@ const FileTable: React.FC = () => {
 
   const fetchFiles = async () => {
     try {
-      const { data } = await axios.get("/files");
-      setFiles(data);
+      const { data } = await axios.get("/api/files");
+      if (Array.isArray(data)) {
+        setFiles(data);
+      } else {
+        console.error("/api/files вернул не массив:", data);
+        setFiles([]);
+      }
     } catch (error) {
-      console.error("Error fetching files:", error);
+      console.error("Ошибка при получении файлов:", error);
+      setFiles([]);
     }
   };
 
@@ -57,7 +63,7 @@ const FileTable: React.FC = () => {
         selectedFiles.map((fileId) =>
           axios({
             method: action === "delete" ? "delete" : "put",
-            url: `/files/${action === "delete" ? "" : action + "/"}${fileId}`,
+            url: `/api/files/${action === "delete" ? "" : action + "/"}${fileId}`,
             headers: { Authorization: `Bearer ${token}` },
           })
         )
@@ -121,7 +127,9 @@ const FileTable: React.FC = () => {
     setCurrentPage(page);
   };
 
-  const paginatedFiles = paginate(files, currentPage, pageSize);
+  const paginatedFiles = Array.isArray(files)
+    ? paginate(files, currentPage, pageSize)
+    : [];
 
   return (
     <>

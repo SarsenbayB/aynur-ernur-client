@@ -67,9 +67,9 @@ const DocuCrud: React.FC = () => {
     try {
       setLoading(true);
       if (isEditing) {
-        await axios.patch(`/files/${id}`, formData);
+        await axios.patch(`/api/files/${id}`, formData);
       } else {
-        await axios.post("/files", formData);
+        await axios.post("/api/files", formData);
       }
       navigate(`/FileTable`);
     } catch (err) {
@@ -83,7 +83,7 @@ const DocuCrud: React.FC = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`/files/${id}`)
+        .get(`/api/files/${id}`)
         .then(({ data }) => {
           setFormData({
             title: data.title,

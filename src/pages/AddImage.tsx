@@ -43,9 +43,9 @@ const AddImage: React.FC = () => {
       setLoading(true);
       const fields = { imageUrl };
       if (isEditing) {
-        await axios.patch(`/images/${id}`, fields);
+        await axios.patch(`/api/images/${id}`, fields);
       } else {
-        await axios.post("/images/add", fields);
+        await axios.post("/api/images/add", fields);
       }
       navigate("/gallerys");
     } catch (err) {
@@ -60,7 +60,7 @@ const AddImage: React.FC = () => {
     if (id) {
       setLoading(true);
       axios
-        .get<{ imageUrl: string }>(`/images/${id}`)
+        .get<{ imageUrl: string }>(`/api/images/${id}`)
         .then(({ data }) => {
           setImageUrl(data.imageUrl);
         })

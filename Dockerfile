@@ -1,7 +1,7 @@
 # Dockerfile для React-Vite клиента
 FROM node:20-alpine as build
 
-WORKDIR usr/src/app
+WORKDIR /usr/src/app
 
 # Копируем package.json и package-lock.json
 COPY package*.json ./

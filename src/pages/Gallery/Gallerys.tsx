@@ -26,7 +26,7 @@ const Gallery: React.FC = () => {
   const fetchImages = async () => {
     try {
       setIsLoading(true);
-      const { data } = await axios.get("/images");
+      const { data } = await axios.get("/api/images");
       setImages(data);
     } catch (error) {
       console.error("Error fetching images:", error);
@@ -102,7 +102,7 @@ const Gallery: React.FC = () => {
             <Col key={image._id} xs={12} sm={6} md={4} lg={3} className="mb-4">
               <div className="position-relative">
                 <img
-                  src={`http://localhost:9999${image.imageUrl}`}
+                  src={`baseURL${image.imageUrl}`}
                   alt={`Image ${image._id}`}
                   className="img-fluid rounded"
                   style={{ width: "100%", height: "200px", objectFit: "cover" }}
@@ -131,7 +131,7 @@ const Gallery: React.FC = () => {
         <Modal.Body className="text-center">
           {images.length > 0 && (
             <img
-              src={`http://localhost:9999${images[selectedImageIndex].imageUrl}`}
+              src={`baseURL${images[selectedImageIndex].imageUrl}`}
               alt={`Image ${images[selectedImageIndex]._id}`}
               style={{
                 maxWidth: "100%",
