@@ -26,7 +26,8 @@ const initialState: TeamState = {
 export const fetchTeam = createAsyncThunk<TeamMember[]>(
   "team/fetchTeam",
   async () => {
-    const { data } = await axios.get("/team");
+    const { data } = await axios.get("/api/team");
+    console.error("Сервер вернул:", data);
     return data;
   }
 );
@@ -34,7 +35,7 @@ export const fetchTeam = createAsyncThunk<TeamMember[]>(
 export const fetchRemoveTeam = createAsyncThunk<string, string>(
   "team/fetchRemoveTeam",
   async (id) => {
-    await axios.delete(`/team/${id}`);
+    await axios.delete(`/api/team/${id}`);
     return id;
   }
 );
