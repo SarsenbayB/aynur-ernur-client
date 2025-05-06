@@ -26,7 +26,7 @@ const AddImage: React.FC = () => {
       if (!file) return;
 
       formData.append("image", file);
-      const { data } = await axios.post<{ url: string }>("/upload/image", formData);
+      const { data } = await axios.post<{ url: string }>("/api/upload/image", formData);
       setImageUrl(data.url);
     } catch (err) {
       console.warn(err);
@@ -111,7 +111,7 @@ const AddImage: React.FC = () => {
             </Button>
             <img
               className="img-fluid"
-              src={`http://localhost:9999${imageUrl}`}
+              src={`baseURL${imageUrl}`}
               alt="Uploaded"
             />
           </>

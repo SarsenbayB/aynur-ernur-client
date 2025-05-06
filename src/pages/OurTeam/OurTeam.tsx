@@ -50,7 +50,7 @@ const OurTeam: React.FC = () => {
                       name={member.name}
                       imageUrl={
                         member.imageUrl
-                          ? `http://localhost:9999${member.imageUrl}`
+                          ? `baseURL${member.imageUrl}`
                           : ""
                       }
                       createdAt={member.createdAt}

@@ -30,7 +30,7 @@ const AddTeam: React.FC = () => {
       const file = event.target.files?.[0]; // Type safety for file
       if (!file) return;
       formData.append("image", file);
-      const { data } = await axios.post("/upload/image", formData);
+      const { data } = await axios.post("/api/upload/image", formData);
       setImageUrl(data.url);
     } catch (err) {
       console.warn(err);
@@ -115,7 +115,7 @@ const AddTeam: React.FC = () => {
             </Button>
             <img
               className="img-fluid"
-              src={`http://localhost:9999${imageUrl}`}
+              src={`baseURL${imageUrl}`}
               alt="Uploaded"
             />
           </>

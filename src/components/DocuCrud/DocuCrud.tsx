@@ -31,7 +31,7 @@ const DocuCrud: React.FC = () => {
       const formData = new FormData();
       formData.append("file", file);
       try {
-        const { data } = await axios.post("/upload/file", formData, {
+        const { data } = await axios.post("/api/upload/file", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
 
