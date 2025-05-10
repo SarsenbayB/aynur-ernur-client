@@ -115,7 +115,7 @@ const AddTeam: React.FC = () => {
             </Button>
             <img
               className="img-fluid"
-              src={`baseURL${imageUrl}`}
+              src={imageUrl}
               alt="Uploaded"
             />
           </>
