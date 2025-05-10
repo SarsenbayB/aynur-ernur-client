@@ -38,7 +38,7 @@ const Gallery: React.FC = () => {
 
   const handleDeleteImage = async (id: string) => {
     try {
-      await axios.delete(`/images/${id}`);
+      await axios.delete(`/api/images/${id}`);
       setImages((prevImages) => prevImages.filter((img) => img._id !== id));
     } catch (error) {
       console.error("Error deleting image:", error);
