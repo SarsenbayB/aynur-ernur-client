@@ -107,10 +107,6 @@ const FileTable: React.FC = () => {
         },
       });
 
-      // Логирование для отладки
-      console.log('Downloaded file with URL:', fileUrl);
-      console.log('Filename extracted:', filename);
-
       const blob = new Blob([response.data]);
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
