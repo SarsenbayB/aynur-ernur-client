@@ -50,7 +50,7 @@ const OurTeam: React.FC = () => {
                       name={member.name}
                       imageUrl={
                         member.imageUrl
-                          ? `baseURL${member.imageUrl}`
+                          ? `${import.meta.env.VITE_API_URL}${member.imageUrl}`
                           : ""
                       }
                       createdAt={member.createdAt}
