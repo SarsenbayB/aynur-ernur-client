@@ -111,7 +111,7 @@ const AddImage: React.FC = () => {
             </Button>
             <img
               className="img-fluid"
-              src={`baseURL${imageUrl}`}
+              src={`${import.meta.env.VITE_API_URL}${imageUrl}`}
               alt="Uploaded"
             />
           </>
