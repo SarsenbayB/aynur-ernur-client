@@ -102,7 +102,7 @@ const Gallery: React.FC = () => {
             <Col key={image._id} xs={12} sm={6} md={4} lg={3} className="mb-4">
               <div className="position-relative">
                 <img
-                  src={`baseURL${image.imageUrl}`}
+                  src={`${import.meta.env.VITE_API_URL}${image.imageUrl}`}
                   alt={`Image ${image._id}`}
                   className="img-fluid rounded"
                   style={{ width: "100%", height: "200px", objectFit: "cover" }}
@@ -131,7 +131,7 @@ const Gallery: React.FC = () => {
         <Modal.Body className="text-center">
           {images.length > 0 && (
             <img
-              src={`baseURL${images[selectedImageIndex].imageUrl}`}
+              src={`${import.meta.env.VITE_API_URL}${images[selectedImageIndex].imageUrl}`}
               alt={`Image ${images[selectedImageIndex]._id}`}
               style={{
                 maxWidth: "100%",
