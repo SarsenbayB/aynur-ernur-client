@@ -16,7 +16,7 @@
   transition-duration: 1s;
 }
 
-.navbar-brand a {
+.navbar-brand {
   color: white;
   transition-duration: 1s;
   font-size: 25px;
@@ -25,12 +25,12 @@
   cursor: pointer;
 }
 
-.navbar-brand a:hover {
+.navbar-brand:hover {
   color: rgb(243, 168, 7);
   transition-duration: 1s;
 }
 
-.navbar-nav .nav-link a {
+.navbar-nav .nav-link {
   font-weight: 400;
   position: relative;
   color: white;
@@ -39,7 +39,7 @@
   transition-duration: 1s;
 }
 
-.navbar-nav .nav-link a:hover {
+.navbar-nav .nav-link:hover {
   color: rgb(243, 168, 7);
   transition-duration: 0.3s;
 }
@@ -67,13 +67,13 @@
   transition-duration: 1s;
 }
 
-.navbar-nav .nav-link a:hover::before {
+.navbar-nav .nav-link:hover::before {
   width: 100%;
   transition-duration: 1s;
   background-color: rgb(243, 168, 7);
 }
 
-.navbar-nav .nav-link a.active {
+.navbar-nav .nav-link.active {
   color: red;
 }
 
