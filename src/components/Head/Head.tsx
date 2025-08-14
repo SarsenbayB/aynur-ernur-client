@@ -26,7 +26,7 @@ const Head: React.FC = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="header bg-gray-800">
       <Container>
-        <Navbar.Brand className="navbar-brand" as={Link} to="/">
+        <Navbar.Brand className="navbar-brand text-white" as={Link} to="/">
           АЙНҰР-ЕРНҰР
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
